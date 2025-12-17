@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Hứng Quà Siêu Vui</title>
+    <link rel="stylesheet" href="styles_catch.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <div class="ui-layer">
+            <div class="score-board">Điểm: <span id="score">0</span></div>
+            <div class="lives-board">Mạng: <span id="lives">❤️❤️❤️</span></div>
+        </div>
+
+        <div id="startScreen" class="overlay">
+            <h1>🎁 HỨNG QUÀ ONLINE</h1>
+            <p>Dùng mũi tên ⬅️ ➡️ hoặc di chuột để di chuyển giỏ.</p>
+            <p>Tránh xa bom 💣 nhé!</p>
+            <button onclick="startGame()">BẮT ĐẦU CHƠI</button>
+        </div>
+
+        <div id="gameOverScreen" class="overlay hidden">
+            <h1>GAME OVER 😭</h1>
+            <p>Điểm của bạn: <span id="finalScore">0</span></p>
+            <button onclick="startGame()">CHƠI LẠI</button>
+        </div>
+
+        <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="bg_music.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="scoreSound">
+        <source src="coin.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="bombSound">
+        <source src="boom.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="scripts_catch.js"></script>
+</body>
+</html>
